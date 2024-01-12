@@ -32,8 +32,10 @@ function startGame() {
     for (let i = 1; i <= 5; i++) {
         for (let j = 1; j <= 5; j++) {
             const tile = document.createElement("div");
-            const input = document.createElement("input")
+            const input = document.createElement("input");
             input.setAttribute("type", "text");
+            input.setAttribute("inputmode", "numeric");
+            input.setAttribute("maxlength", 1);
             tile.classList.add("tile");
             if (i == 1) {
                 tile.textContent = units[j - 1];
