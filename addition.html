@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>Kids Math App</title>
+</head>
+
+<body>
+    <br/>
+    <div id="welcome" style="display: block;" class="container">
+        <h2>Welcome to Simple Addition</h2>
+        <h3>In this game you will get 10 addition problems</h3>
+        <button id="start" class="yellow-button">Start</button>
+    </div>
+    <div id="game" style="display: none" class="container">
+        <h2>Addition</h2>
+        <div id="grid-container"></div>
+        <div class="buttons">
+            <button id="check" class="green-button">Check</button>
+            <button id="next" class="yellow-button hide">Next</button>
+        </div>
+    </div>
+    <br />
+    <div id="score" style="display: none" class="container">
+        <h2>Score</h2>
+        <div id="score-container"></div>
+    </div>
+    <br/>
+    <div id="end" style="display: none;" class="container">
+        <h3>Thank you for Playing!!</h3>
+        <button id="again" class="green-button">Play Again!</button>
+    </div>
+
+    <div id="author">
+        <div>Made with &hearts; by <a href="https://linkedin.com/in/kushrupani" target="_blank">Kaushal Rupani</a></div>
+    </div>
+    <script src="./scripts/addition.js"></script>
+</body>
+
+</html>
