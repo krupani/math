@@ -102,3 +102,7 @@ button {
 .hide {
     display: none;
 }
+
+#author {
+    padding-top: 10px;
+}

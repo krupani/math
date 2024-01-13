@@ -20,7 +20,7 @@ multiplierSet = shuffle(multiplierSet);
 let counter = 1;
 
 function startGame() {
-    console.log ("========>" + multiplierSet)
+    // console.log ("========>" + multiplierSet)
     welcomeDiv.style.display = "none";
     gameDiv.style.display = "block";
     scoreDiv.style.display = "block";
@@ -113,6 +113,9 @@ function updateScore(flag) {
     if (flag) {
         correctSound.play();
         scoreBall.innerHTML = '<img src="./media/images/correct.png"></img>'
+        checkButton.classList.remove("hide");
+        nextButton.classList.add("hide");
+        startGame();
     } else {
         wrongSound.play();
         scoreBall.innerHTML = '<img src="./media/images/wrong.png"></img>'

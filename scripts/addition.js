@@ -3,7 +3,8 @@ const gameDiv = document.getElementById("game");
 const scoreDiv = document.getElementById("score");
 const endDiv = document.getElementById("end");
 const scoreContainer = document.getElementById("score-container");
-const startButton = document.getElementById("start");
+const easyButton = document.getElementById("easy");
+const mediumButton = document.getElementById("medium");
 const checkButton = document.getElementById("check");
 const nextButton = document.getElementById("next");
 const againButton = document.getElementById("again");
@@ -12,6 +13,7 @@ const wrongSound = new Audio('media/sounds/buzzer.wav');
 const correctSound = new Audio('media/sounds/correct.wav');
 const gameOverSound = new Audio('media/sounds/gameover.wav');
 const units = ["TTh", "Th", "H", "T", "O"];
+let level;
 
 let counter = 1;
 
@@ -23,8 +25,9 @@ function startGame() {
 
     num1 = generateNumber();
     num2 = generateNumber();
+    num3 = generateNumber();
 
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= level; i++) {
         for (let j = 1; j <= 5; j++) {
             const tile = document.createElement("div");
             const input = document.createElement("input");
@@ -42,18 +45,13 @@ function startGame() {
                 gridContainer.appendChild(tile);
                 if (j == 2 || j == 3 || j == 4) {
                     tile.appendChild(input);
-                }
-            } else if (i == 5) {
-                input.id = "a" + units[j - 1]
-                tile.classList.add("answer")
-                gridContainer.appendChild(tile);
-                tile.appendChild(input);
+                }  
             } else if (i == 3) {
                 tile.classList.add("sum");
                 if (j != 1) {tile.textContent = num1[j - 2];}
                 tile.id = i - 2 + units[j - 1]
                 gridContainer.appendChild(tile);
-            } else {
+            } else if (i == 4) {
                 tile.classList.add("sum");
                 if (j == 1) { tile.textContent = "+"; }
                 else { tile.textContent = num2[j - 2] }
@@ -61,6 +59,27 @@ function startGame() {
                 gridContainer.appendChild(tile);
             }
 
+            if (level == 5) {
+                if (i == 5) {
+                    input.id = "a" + units[j - 1]
+                    tile.classList.add("answer")
+                    gridContainer.appendChild(tile);
+                    tile.appendChild(input);
+                }
+            } else {
+                if (i == 5) {
+                    tile.classList.add("sum");
+                    if (j == 1) { tile.textContent = "+"; }
+                    else { tile.textContent = num3[j - 2] }
+                    tile.id = i - 2 + units[j - 1]
+                    gridContainer.appendChild(tile);
+                } else if ( i == 6 ) {
+                    input.id = "a" + units[j - 1]
+                    tile.classList.add("answer")
+                    gridContainer.appendChild(tile);
+                    tile.appendChild(input);
+                } 
+            }
         }
     }
 }
@@ -88,7 +107,8 @@ function checkAnswer() {
     thAns = document.getElementById("aTh").value;
     tthAns = document.getElementById("aTTh").value;
 
-    let expectedAnswer = Number(num1.join('')) + Number(num2.join(''))
+    let expectedAnswer = Number(num1.join('')) + Number(num2.join(''));
+    if (level == 6) { expectedAnswer = expectedAnswer + Number(num3.join(''));}
     let actualAnswer = Number([tthAns, thAns, hAns, tAns, oAns].join(''))
 
     // console.log("=======> " + expectedAnswer + "=======>" + actualAnswer)
@@ -101,6 +121,9 @@ function updateScore(flag) {
     if (flag) {
         correctSound.play();
         scoreBall.innerHTML = '<img src="./media/images/correct.png"></img>'
+        checkButton.classList.remove("hide");
+        nextButton.classList.add("hide");
+        startGame();
     } else {
         wrongSound.play();
         scoreBall.innerHTML = '<img src="./media/images/wrong.png"></img>'
@@ -116,8 +139,15 @@ function updateScore(flag) {
     }
 }
 
-startButton.addEventListener("click", () => {
+easyButton.addEventListener("click", () => {
     loadScoreBoard();
+    level = 5;
+    startGame();
+});
+
+mediumButton.addEventListener("click", () => {
+    loadScoreBoard();
+    level = 6;
     startGame();
 });
 
