@@ -1,9 +1,14 @@
+html {
+    overscroll-behavior: none;
+}
+
 body {
     font-family: 'Comic Sans MS', sans-serif;
     background-color: #E1D4FF;
     margin: 0;
     padding: 0;
     text-align: center;
+    overscroll-behavior: none;
 }
 
 .container {
