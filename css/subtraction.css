@@ -1,0 +1,24 @@
+.subtile {
+    width: calc(95% / 4);
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.blank {
+    width: 5%;
+    border-left: transparent;
+    border-bottom: transparent;
+    border-top: transparent;
+}
+
+sup {
+    background: linear-gradient(to right top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+}
+
+.crossed {
+    background: linear-gradient(to right top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+}

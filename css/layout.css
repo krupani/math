@@ -13,6 +13,7 @@ body {
     max-width: 400px;
     background-color: white;
     padding: 20px;
+    padding-bottom: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -27,7 +28,6 @@ h2 {
     height: 50px;
     display: inline-block;
     text-align: center;
-    /* line-height: 80px; */
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-family: 'Comic Sans MS', sans-serif;
@@ -54,14 +54,15 @@ img {
 }
 
 input {
-    width: 90%;
+    width: 95%;
     background: transparent;
-    height: 90%;
+    height: 95%;
     font-size: 30px;
     text-align: center;
     color: black;
     border: 0px;
     font-family: 'Comic Sans MS', sans-serif;
+    box-sizing: border-box;
 }
 
 .sum {
@@ -94,7 +95,7 @@ button {
 }
 
 .buttons {
-    margin-top: 5px;
+    margin-top: 20px;
     display: grid;
     place-items: center;
 }
