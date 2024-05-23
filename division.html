@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/division.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>Kids Math App</title>
+</head>
+
+<body>
+    <br />
+    <div id="welcome" style="display: block;" class="container">
+        <h2 id="title">Welcome to Simple Division</h2>
+        <h3>In this game you will get 10 division problems to solve.</h3>
+        <button id="easy" class="yellow-button">Start</button>
+        <!-- <button id="medium" class="yellow-button">Remainder</button> -->
+    </div>
+    <div id="game" style="display: none" class="container">
+        <h2>Division</h2>
+        <div id="grid-container">
+            <!-- units -->
+            <div class="divisortile bold unit">O</div>
+            <div class="divtile bold unit">H</div>
+            <div class="divtile bold unit">T</div>
+            <div class="divtile bold unit">O</div>
+            
+            <!-- quotient -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="qH">
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="qT">
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="qO">
+            </div>
+
+
+            <!-- problem -->
+            <div class="divisortile right sum" id="divisor"></div>
+            <div class="divtile top sum" id="dH"></div>
+            <div class="divtile top sum" id="dT"></div>
+            <div class="divtile top sum right" id="dO"></div>
+            
+            <!-- solve 1 -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+
+            <!-- solve 2 -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+           
+            <!-- solve 3 -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            
+            <!-- solve 4 -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+           
+            <!-- solve 5 -->
+            <div class="divisortile"></div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+            <div class="divtile dotted">
+                <input type="text" inputmode="numeric" maxlength=1>
+            </div>
+
+            <!-- remainder -->
+            <div class="divisortile"></div>
+            <div class="divtile top dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="rH">
+            </div>
+            <div class="divtile top dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="rT">
+            </div>
+            <div class="divtile top dotted">
+                <input type="text" inputmode="numeric" maxlength=1 id="rO">
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <button id="check" class="green-button">Check</button>
+            <button id="next" class="yellow-button hide">Next</button>
+        </div>
+    </div>
+    <br />
+    <div id="score" style="display: none" class="container">
+        <h2>Score</h2>
+        <div id="score-container"></div>
+    </div>
+    <br />
+    <div id="end" style="display: none;" class="container">
+        <h3>Thank you for Playing!!</h3>
+        <button id="again" class="green-button">Play Again!</button>
+        <button id="back" class="yellow-button"><a href="index.html">Go Back!</a></button>
+    </div>
+
+    <div id="author">
+        <div>Made with &hearts; by <a href="https://linkedin.com/in/kushrupani" target="_blank">Kaushal Rupani</a></div>
+    </div>
+    <script src="./scripts/division.js"></script>
+</body>
+
+</html>

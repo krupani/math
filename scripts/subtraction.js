@@ -186,15 +186,6 @@ nextButton.addEventListener('click', function () {
     startGame();
 });
 
-// function toggleClass(element, className) {
-//     tClass = tClass.replace(/\s/g, "");
-
-//     var classes =  element.className;
-//     element.className = classes.indexOf(tClass) !== -1 
-//         ? classes.replace(" " + tClass, "")
-//         : classes + " " + tClass;
-// }
-
 function toggleClass(element, tClass) {
     var classes =  element.className.split(' ');
     if (classes.indexOf(tClass) !== -1) {

@@ -1,0 +1,30 @@
+.divtile {
+    width: calc(82% / 3);
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.divisortile {
+    width: 17.5%;
+}
+
+.dotted {
+    border: 1px dotted #ccc;
+}
+
+.right {
+    border-right: 2px solid #000;
+}
+
+.top {
+    border-top: 2px solid #000;
+}
+
+.left {
+    border-left: 2px solid #000;
+}
+
+
