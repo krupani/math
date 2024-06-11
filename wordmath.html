@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/wordmath.css">
+    <title>Simple Math</title>
+</head>
+
+<body>
+    <br />
+    <div id="welcome" style="display: block;" class="container">
+        <h2>Welcome to Simple Word Math</h2>
+        <h3>In this game you will get 10 Word Math problems.</h3>
+        <button id="easy" class="yellow-button">Word to Number</button>
+        <button id="medium" class="yellow-button">Number to Word</button>
+    </div>
+    <div id="game" style="display: none" class="container">
+        <h2>Word Math</h2>
+        <div id="grid-container">
+            <div class="word" id="word">
+
+            </div>
+
+            <div class="tile bold unit">TTh</div>
+            <div class="tile bold unit">Th</div>
+            <div class="tile bold unit">H</div>
+            <div class="tile bold unit">T</div>
+            <div class="tile bold unit">O</div>
+
+            <div class="tile" id="numTTh"></div>
+            <div class="tile" id="numTh"></div>
+            <div class="tile" id="numH"></div>
+            <div class="tile" id="numT"></div>
+            <div class="tile" id="numO"></div>
+
+            <div class="word bottom hide" id="sentence">
+                <p id="type"></p>
+                <button class="action yellow-button" id="undo">Undo</button>
+                <button class="action red-button" id="clear">Clear</button>
+            </div>
+
+            <div id="buttons_collection">
+                <div class="bottom">
+                    <button class="num" id="num">One</button>
+                    <button class="num" id="num">Two</button>
+                    <button class="num" id="num">Three</button>
+                    <button class="num" id="num">Four</button>
+                    <button class="num" id="num">Five</button>
+                    <button class="num" id="num">Six</button>
+                    <button class="num" id="num">Seven</button>
+                    <button class="num" id="num">Eight</button>
+                    <button class="num" id="num">Nine</button>
+                </div>
+
+                <div class="bottom">
+                    <button class="num" id="num">Ten</button>
+                    <button class="num" id="num">Eleven</button>
+                    <button class="num" id="num">Twelve</button>
+                    <button class="num" id="num">Thirteen</button>
+                    <button class="num" id="num">Fourteen</button>
+                    <button class="num" id="num">Fifteen</button>
+                    <button class="num" id="num">Sixteen</button>
+                    <button class="num" id="num">Seventeen</button>
+                    <button class="num" id="num">Eighteen</button>
+                    <button class="num" id="num">Nineteen</button>
+                </div>
+
+                <div class="bottom">
+                    <button class="num" id="num">Twenty</button>
+                    <button class="num" id="num">Thirty</button>
+                    <button class="num" id="num">Forty</button>
+                    <button class="num" id="num">Fifty</button>
+                    <button class="num" id="num">Sixty</button>
+                    <button class="num" id="num">Seventy</button>
+                    <button class="num" id="num">Eighty</button>
+                    <button class="num" id="num">Ninety</button>
+                </div>
+
+                <div>
+                    <button class="num" id="num">Hundred</button>
+                    <button class="num" id="num">Thousand</button>
+                    <button class="num" id="num">and</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="buttons">
+            <button id="check" class="green-button">Check</button>
+            <button id="next" class="yellow-button hide">Next</button>
+        </div>
+    </div>
+    <br />
+    <div id="score" style="display: none" class="container">
+        <h2>Score</h2>
+        <div id="score-container"></div>
+    </div>
+    <br />
+    <div id="end" style="display: none;" class="container">
+        <h3>Thank you for Playing!!</h3>
+        <button id="again" class="green-button">Play Again!</button>
+        <button id="back" class="yellow-button"><a href="index.html">Go Back!</a></button>
+    </div>
+
+    <div id="author">
+        <div>Made with &hearts; by <a href="https://linkedin.com/in/kushrupani" target="_blank">Kaushal Rupani</a></div>
+    </div>
+    <script src="./scripts/wordmath.js"></script>
+</body>
+
+</html>
