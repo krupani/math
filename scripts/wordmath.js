@@ -105,6 +105,7 @@ function updateScore(flag) {
         scoreBall.innerHTML = '<img src="./media/images/wrong.png"></img>'
     }
     if (counter == 10) {
+        stopTimer();
         gameOverSound.play();
         welcomeDiv.style.display = "none";
         gameDiv.style.display = "none";
@@ -206,12 +207,14 @@ clearButton.addEventListener("click", () => {
 easyButton.addEventListener("click", () => {
     loadScoreBoard();
     type = "word2num";
+    startTimer();
     startGame();
 });
 
 mediumButton.addEventListener("click", () => {
     loadScoreBoard();
     type = "num2word";
+    startTimer();
     startGame();
 });
 

@@ -150,6 +150,7 @@ function updateScore(flag) {
         scoreBall.innerHTML = '<img src="./media/images/wrong.png"></img>'
     }
     if (counter == 10) {
+        stopTimer();
         gameOverSound.play();
         welcomeDiv.style.display = "none";
         gameDiv.style.display = "none";
@@ -163,12 +164,14 @@ function updateScore(flag) {
 easyButton.addEventListener("click", () => {
     loadScoreBoard();
     type = "simple";
+    startTimer();
     startGame();
 });
 
 mediumButton.addEventListener("click", () => {
     loadScoreBoard();
     type = "borrow";
+    startTimer();
     startGame();
 });
 
